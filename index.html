@@ -9,24 +9,24 @@
     <div class="gamearea">
         <div class="clicker-tracker">
             <ul> 
-                <li>Turnips: <span id="turnip-counter"></span></li>
-                <li>Cucumber: <span id="cucumber-counter"></span></li>
-                <li>Helpers: <span id="helpers">0</span></li>
+                <li>Turnips: <span id="turnip-counter">0</span></li>
+                <li class="toggle-content" id="cucumber-counter">Cucumber: <span id=cucumber-count>0</span></li>
+                <li class="toggle-content" id="helper-counter">Helpers: <span id="helpers">0</span></li>
             </ul>
         </div>
         <div class="clicker-actions">
             <button onclick="clickTurnip(1)">Harvest Turnip</button>
-            <button onclick="clickCucumber(1)">Harvest Cucumber</button>
-            <button onclick="buyCursor()">Hire Helper</button>
+            <button class="toggle-content" id="harvest-cucumber" onclick="clickCucumber(1)">Harvest Cucumber</button>
+            <button class="toggle-content" id="hire-helper" onclick="buyCursor()">Hire Helper</button>
         </div>
         <div class="assign-helpers">
-            <div>
+            <div class="toggle-content" id="turnip-farmer">
                 Turnip Farmers
                 <button onclick="decTurnHelp(1)">-</button><button onclick="incTurnHelp(1)">+</button>
                 <br>
                 Assigned: <span id="turnip-helper"></span>
             </div>
-            <div>
+            <div class="toggle-content" id="cucumber-farmer">
                 Cucumber Farmers
                 <button onclick="decCucumberHelp(1)">-</button><button onclick="incCucumberHelp(1)">+</button>
                 <br>

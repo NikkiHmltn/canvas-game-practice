@@ -7,11 +7,30 @@ let cucumberCursor = 0
 function clickTurnip(num) {
     turnips += num
     document.getElementById("turnip-counter").textContent = turnips
+    let turnipFarm = document.getElementById("turnip-farmer")
+    if (turnips >= 10){
+        let helperCount= document.getElementById("helper-counter")
+        helperCount.classList.remove("toggle-content")
+        let helperBuy= document.getElementById("hire-helper")
+        helperBuy.classList.remove("toggle-content")
+        turnipFarm.classList.remove("toggle-content")
+    }
+    if (turnips >= 20 && helpers >= 1){
+        let cucumberCount = document.getElementById("cucumber-counter")
+        cucumberCount.classList.remove("toggle-content")
+        let cucumberHarvest = document.getElementById("harvest-cucumber")
+        cucumberHarvest.classList.remove("toggle-content")
+        let cucumberHelper = document.getElementById("cucumber-farmer")
+        cucumberHelper.classList.remove("toggle-content")
+    }
 }
 
 function clickCucumber(num) {
     cucumber += num
-    document.getElementById("cucumber-counter").textContent = cucumber
+    document.getElementById("cucumber-count").textContent = cucumber
+    if (cucumber >= 20){
+        
+    }
 }
 
 function buyCursor(){
@@ -23,7 +42,7 @@ function buyCursor(){
         document.getElementById("turnip-counter").textContent = turnips
     }
     let nextCost = Math.floor(10 * Math.pow(2.1, helpers))
-    document.getElementById("helper-cost").textContent = nextCost
+    // document.getElementById("helper-cost").textContent = nextCost
 }
 
 function incTurnHelp(num) {
