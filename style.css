@@ -4,6 +4,9 @@ html, body{
     background:rgb(248, 201, 201);
 }
 
+ul {
+    list-style: none;
+}
 .gamearea {
     height: 100%;
     display: flex;
@@ -25,4 +28,14 @@ html, body{
     padding: 2rem;
     height: 30%;
     width: 30%;
+}
+
+.assign-helpers {
+    border: solid 1px black;
+    margin: 1rem;
+    padding: 2rem;
+    width: 30%;
+    height: 20%;
+    display: flex;
+    
 }
