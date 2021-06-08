@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>Farm Idle</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="gamearea">
-        <div>
-            <span id="turnip-counter"></span>
-            <button onclick="clickTurnip(1)">Turnip</button>
+    <div class="gamearea">
+        <div class="clicker-tracker">
+            Turnips: <span id="turnip-counter"></span>
+            Cucumber: <span id="cucumber-counter"></span>
+            Helpers: <span id="cursors">0</span>
         </div>
-        <div>
-            Cursors: <span id="cursors">0</span>
-            Cost: <span id="cursor-cost">10</span>
-            <button onclick="buyCursor()">Buy Cursor</button>
+        <div class="clicker-actions">
+            <button onclick="clickTurnip(1)">Harvest Turnip</button>
+            <button onclick="clickCucumber(1)">Harvest Cucumber</button>
+            <button onclick="buyCursor()">Hire Helper</button>
         </div>
         
     </div>

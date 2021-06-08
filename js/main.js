@@ -1,9 +1,16 @@
 let turnips = 0
+let cucumber = 0
 let cursors = 0
+
 
 function clickTurnip(num) {
     turnips += num
     document.getElementById("turnip-counter").textContent = turnips
+}
+
+function clickCucumber(num) {
+    cucumber += num
+    document.getElementById("cucumber-counter").textContent = cucumber
 }
 
 function buyCursor(){
@@ -20,4 +27,5 @@ function buyCursor(){
 
 window.setInterval(() => {
     clickTurnip(cursors)
+    clickCucumber(cursors)
 }, 1000)
